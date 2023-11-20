@@ -1,19 +1,21 @@
 const prima = prompt('scrivi una parola')
-const seconda = 
+const seconda = prompt('scrivi una parola')
 
 
-function parole ( primaparola, secondaParola){
-   
-
-    if( primaparola.length === secondaParola.length){
-        return true
-
-    
-    }else{
-        return false
-    }
-
-    
+if (sonoUguali (prima, seconda)){
+    console.log(prima, seconda)
+} else if ( prima.length > seconda.length){
+    console.log(prima)
+} else {
+    console.log(seconda)
 }
 
-if (sonoUguali())
+function sonoUguali (parolaUno, parolaDue){
+    if (parolaUno.length === parolaDue){
+        return true
+    } else {
+        return false
+    }
+}
+
+
