@@ -1,17 +1,15 @@
 
-const userNumber = parseInt( prompt ('dimmi un numer0'))
+const userNumber = parseInt( prompt ('dimmi un numer0'));
 
-function getNewSquare(){
-    const newSquareElement = document.createElement ('article');
-    newSquareElement.classList.add ('items-square');
+const wrapper = document.querySelector('section .main-content');
 
-    return newSquareElement
+for (let i = 0; i < userNumber; i ++){
+    wrapper.appendChild(generateSquare);
 }
 
+function generateSquare(){
+    const divElement = document.createElement('div');
+    divElement.classList.add('square');
 
-const mainContentElement = document.querySelector('main section .main-content')
-
-for ( let i = 0; i < userNumber; i ++){
-    const currentSquare = getNewSquare();
-    
+    return divElement
 }
